@@ -8,7 +8,7 @@ what_to_type = ''
 
 # functions
 def simulate_typing():
-    keyboard.write(what_to_type)
+    keyboard.write(what_to_type, '')
     time.sleep(1)
     simulate_typing()
 
