@@ -1,5 +1,7 @@
 # Import
 import PySimpleGUI as sg
+import pynput
+from pynput.keyboard import Key, Controller
 import time
 import keyboard
 
@@ -9,6 +11,8 @@ what_to_type = ''
 # functions
 def simulate_typing():
     keyboard.write(what_to_type, '')
+    keyboard.press('enter')
+    keyboard.release('enter')
     time.sleep(1)
     simulate_typing()
 
