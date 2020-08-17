@@ -1,9 +1,16 @@
 # Import
 import PySimpleGUI as sg
 import time
+import keyboard
 
 # Variables
 what_to_type = ''
+
+# functions
+def simulate_typing():
+    keyboard.write(what_to_type)
+    time.sleep(1)
+    simulate_typing()
 
 # Set Theme
 sg.theme('Reddit')
@@ -25,7 +32,7 @@ while True:
         break
     if event in ('Start Typing'):
         what_to_type = values[0]
-        
+        simulate_typing()
 
 # Closes Gui and game
 window.close()
