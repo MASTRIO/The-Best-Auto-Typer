@@ -15,7 +15,7 @@ def simulate_typing():
     if simulate_enter == True:
         keyboard.press('enter')
         keyboard.release('enter')
-    time.sleep(1)
+    time.sleep(0.5)
     simulate_typing()
 
 # Set Theme
